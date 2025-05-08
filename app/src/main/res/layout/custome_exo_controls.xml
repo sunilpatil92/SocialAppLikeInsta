@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/exo_controller"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Play/Pause Button -->
+    <ImageButton
+        android:id="@id/exo_play_pause"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:scaleType="centerInside" />
+
+    <!-- SeekBar -->
+    <androidx.media3.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

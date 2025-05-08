@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_app"
+    android:orientation="vertical"
+    android:paddingVertical="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp">
+
+        <ImageView
+            android:id="@+id/ivPuserPic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iv_profile_circle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ivPuserPic"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPuserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/text_white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPostDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Jan 2025"
+                android:textColor="@color/text_sub_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivPuserOption"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_options" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/text_white"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlMediaView"
+        android:layout_width="match_parent"
+        android:layout_height="460dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pagerMedia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_rounded_gray"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:text="1/5"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        app:dotsColor="@color/text_sub_gray"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="3dp"
+        app:progressMode="true"
+        app:selectedDotColor="@color/text_green" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/ivClap"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_clap" />
+
+        <ImageView
+            android:id="@+id/ivComment"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@+id/ivClap"
+            android:padding="2dp"
+            android:src="@drawable/ic_comment" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@+id/ivComment"
+            android:padding="2dp"
+            android:rotation="270"
+            android:src="@drawable/ic_share" />
+
+        <ImageView
+            android:id="@+id/ivreload"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_refresh" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/avatarContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:clipChildren="false">
+
+            <ImageView
+                android:id="@+id/avatar1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/iv_profile_circle"
+                android:scaleType="centerCrop"
+                android:translationZ="3dp" />
+
+            <ImageView
+                android:id="@+id/avatar2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/iv_profile_circle"
+                android:scaleType="centerCrop"
+                android:translationZ="2dp" />
+
+            <ImageView
+                android:id="@+id/avatar3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/iv_profile_circle"
+                android:scaleType="centerCrop"
+                android:translationZ="1dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvLikePerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Dione- Navinbhai and 8 others Teps this"
+            android:textColor="@color/text_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ss_user" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_app"
+            android:padding="10dp"
+            android:text="Add a comment..."
+            android:textColor="@color/text_sub_gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:padding="10dp"
+        android:text="why you're seeing this post"
+        android:textColor="@color/text_green" />
+
+</LinearLayout>
