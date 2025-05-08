@@ -1,4 +1,4 @@
-This is Social Media App Post screen with MVVM architecture.
+This is Social Media App Post screen with MVVM architecture, shimmer Animation loader with Pagination.
 - Showing Post list and some post items have multiple Media like Images and Video.
 - Handle video buffer loader, Preload video with Playing.
 - Cache video and Play downloaded video without internet.
